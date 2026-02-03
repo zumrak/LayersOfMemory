@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+:root {
+	--color-beige: #f5f0e6;
+	--color-coffee: #6f4e37;
+	--color-coffee-light: #8b6f47;
+}
+
+body {
+	background-color: #000;
+	color: var(--color-beige);
+}
+
+html,
+body {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+	display: none;
+}
