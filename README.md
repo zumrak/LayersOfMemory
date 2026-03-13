@@ -49,7 +49,28 @@ Alle weiteren Schritte gehen davon aus, dass Sie sich **im Ordner `LayersOfMemor
 
 ---
 
-### 4. Abhängigkeiten installieren (Frontend)
+### 4. Aufbauanleitung (Raum & Technik)
+
+#### Raum und Aufbau
+
+1. Beamer auf ein Podest stellen.
+2. Laptop verdeckt unter dem Podest platzieren (Lüftung freihalten).
+3. Fünf Vorhänge parallel hintereinander von der Decke aufhängen.
+4. Abstand Beamer zum ersten Vorhang: ca. 1–2 m.
+5. Abstand zwischen den Vorhängen: ca. 35 cm.
+6. Mikrofon seitlich neben dem Podest platzieren.
+7. Maus neben dem Beamer bereitlegen.
+
+#### Verkabelung
+
+- Laptop und Beamer mit Strom versorgen.
+- HDMI-Kabel vom Laptop zum Beamer anschließen.
+- Mikrofon per USB/USB-C mit dem Laptop verbinden.
+- Maus per USB anschließen.
+
+---
+
+### 5. Abhängigkeiten installieren (Frontend)
 
 Im Projektordner:
 
@@ -61,7 +82,7 @@ Dieser Befehl liest die `package.json` und `pnpm-lock.yaml` ein und installiert 
 
 ---
 
-### 5. Eigene API‑Konfiguration / `.env` anlegen
+### 6. Eigene API‑Konfiguration / `.env` anlegen
 
 Wir liefern **keine** produktiven API‑Schlüssel mit.  
 Damit die Bildgenerierung funktioniert, müssen Sie eigene Zugangsdaten anlegen und in einer `.env`‑Datei eintragen.
@@ -97,7 +118,7 @@ Copy-Item .env.example .env
 
 ---
 
-### 6. Lokalen Whisper‑Dienst starten (Spracherkennung)
+### 7. Lokalen Whisper‑Dienst starten (Spracherkennung)
 
 Für die Transkription der gesprochenen Erinnerungen nutzt das Projekt einen **lokalen Whisper‑Server** (Python, FastAPI/Uvicorn).
 
@@ -148,7 +169,7 @@ uvicorn main:app --host 127.0.0.1 --port 8000
 
 ---
 
-### 7. Web‑Anwendung starten (Frontend / SvelteKit)
+### 8. Web‑Anwendung starten (Frontend / SvelteKit)
 
 Öffnen Sie ein **neues** Terminal oder Tab (Whisper‑Server weiterlaufen lassen!) und gehen Sie zurück in den Projektstamm:
 
@@ -172,7 +193,7 @@ Die Ausgabe zeigt Ihnen die URL an, z. B.:
 
 ---
 
-### 8. Anwendung im Ausstellungsmodus benutzen
+### 9. Anwendung im Ausstellungsmodus benutzen
 
 1. Öffnen Sie im Browser die Dev‑URL, z. B. `http://localhost:5173`.
 2. Ziehen Sie das Browserfenster auf den Beamer‑Bildschirm oder aktivieren Sie Bildschirm duplizieren.
@@ -188,7 +209,7 @@ Die Ausgabe zeigt Ihnen die URL an, z. B.:
 
 ---
 
-### 9. Server und Ausstellung stoppen
+### 10. Server und Ausstellung stoppen
 
 1. **Browser schließen** oder `F11` drücken, um den Vollbildmodus zu verlassen.
 2. Im Terminal mit dem Dev‑Server:
@@ -199,7 +220,7 @@ Die Ausgabe zeigt Ihnen die URL an, z. B.:
 
 ---
 
-### 10. Typische Fehler und Lösungen (kurz)
+### 11. Typische Fehler und Lösungen (kurz)
 
 - **Kein Bild wird generiert**
   - Prüfen, ob der Whisper‑Server läuft.
@@ -213,7 +234,7 @@ Die Ausgabe zeigt Ihnen die URL an, z. B.:
 
 ---
 
-### 11. Projektstruktur (Überblick)
+### 12. Projektstruktur (Überblick)
 
 - `src/` – SvelteKit‑Anwendung (UI, Logik, Routen)
 - `static/gallery/` – Hier werden generierte PNG‑Bilder abgelegt
@@ -223,7 +244,7 @@ Die Ausgabe zeigt Ihnen die URL an, z. B.:
 
 ---
 
-### 12. Wichtiger Hinweis zu API‑Schlüsseln
+### 13. Wichtiger Hinweis zu API‑Schlüsseln
 
 - Im Repository sind **keine** gültigen Schlüssel für externe Dienste enthalten.
 - Prüfer:innen / Installierende müssen:
